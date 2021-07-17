@@ -7,6 +7,7 @@ using TMPro;
 public class PlayerController2D : MonoBehaviour
 {
     public CharacterController2D controller;
+    public GameManager manager; 
     public Animator animator;
     public float runSpeed;
     public float horizontalMove;
@@ -17,11 +18,13 @@ public class PlayerController2D : MonoBehaviour
     public TextMeshProUGUI pointsText;
 
     public TextMeshProUGUI energyText;
-
+    public bool pauseornot = false;
     void Start()
     {
         pointsText.text = "Points: " + points;
         energyText.text = "Energy: " + energy;
+
+        manager = GameObject.Find("Game Manager").GetComponent<GameManager>(); 
     }
 
     void Update()
@@ -51,8 +54,18 @@ public class PlayerController2D : MonoBehaviour
         {
             //jump = false;
             animator.SetBool("Jump", false);
+        }
 
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseornot == false)
+        {
+            pauseornot = true;
+            manager.Pause();
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) && pauseornot == true) 
+        {
 
+            pauseornot = false;
+            manager.Unpause();
         }
     }
 
