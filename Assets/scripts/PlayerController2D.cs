@@ -24,7 +24,7 @@ public class PlayerController2D : MonoBehaviour
         pointsText.text = "Points: " + points;
         energyText.text = "Energy: " + energy;
 
-        manager = GameObject.Find("Game Manager").GetComponent<GameManager>(); 
+       //manager = GameObject.Find("GameManager").GetComponent<GameManager>(); 
     }
 
     void Update()

@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5476269963992566042}
+  manager: {fileID: 0}
   animator: {fileID: 5476269963992566046}
   runSpeed: 50
   horizontalMove: 0
@@ -250,6 +251,7 @@ MonoBehaviour:
   energy: 100
   pointsText: {fileID: 0}
   energyText: {fileID: 0}
+  pauseornot: 0
 --- !u!95 &5476269963992566046
 Animator:
   serializedVersion: 3
@@ -262,7 +264,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 4093ceba8df05204cac806d92b59457a, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
