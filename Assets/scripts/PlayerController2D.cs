@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerController2D : MonoBehaviour
@@ -94,6 +95,11 @@ public class PlayerController2D : MonoBehaviour
             
             points -= other.GetComponent<EnimyController>().damage;
             pointsText.text = "Points: " + points;
+
+            if(energy<=0) 
+            {
+                SceneManager.LoadScene("GameOver");
+            }
 
         }
     }
