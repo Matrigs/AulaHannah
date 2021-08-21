@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/animations/Scenes/main menu.unity
+    path: Assets/Scenes/main menu.unity
     guid: 8d8bd3ee707968f43b144b47baf5ca4d
   - enabled: 1
-    path: "Assets/animations/Scenes/level\xC7elect.unity"
+    path: "Assets/Scenes/level\xC7elect.unity"
     guid: f6688b620dbc25b449af8bb8e8ec35d9
   - enabled: 1
-    path: Assets/animations/Scenes/level-1.unity
+    path: Assets/Scenes/level-1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/animations/Scenes/level-2.unity
+    path: Assets/Scenes/level-2.unity
     guid: 895a8f1e53e71f2468d400a5ca2e292a
   - enabled: 1
-    path: Assets/animations/Scenes/level-3.unity
+    path: Assets/Scenes/level-3.unity
     guid: 7435fab2cdde9a1408ad119d625a345c
   - enabled: 1
-    path: Assets/animations/Scenes/GameOver.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 41a51e744db186a4aa78f42a78421ae8
   m_configObjects: {}

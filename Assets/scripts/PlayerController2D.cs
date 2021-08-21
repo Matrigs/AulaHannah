@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class PlayerController2D : MonoBehaviour
 {
     public CharacterController2D controller;
-    public GameManager manager; 
+    public GameManager manager;
+    public Rigidbody2D rb;
     public Animator animator;
     public float runSpeed;
     public float horizontalMove;
@@ -90,18 +91,30 @@ public class PlayerController2D : MonoBehaviour
         }
         if (other.tag == "ENIMY")
         {
-            energy -= other.GetComponent<EnimyController>().damage;
-            energyText.text = "Energy: " + energy;
-            
-            points -= other.GetComponent<EnimyController>().damage;
-            pointsText.text = "Points: " + points;
 
-            if(energy<=0) 
+
+            if (energy <= 0)
             {
                 SceneManager.LoadScene("GameOver");
             }
 
         }
     }
-}
+    
+    void damage(Collider2D other) 
+    {
+        energy -= other.GetComponent<EnimyController>().damage;
+        energyText.text = "Energy: " + energy;
 
+        points -= other.GetComponent<EnimyController>().damage;
+        pointsText.text = "Points: " + points;
+        if (energy <= 0)
+        {
+
+        }
+    }
+    void die() 
+    {
+        rb.AddForce(new Vector2(0, 100));
+    }
+}
